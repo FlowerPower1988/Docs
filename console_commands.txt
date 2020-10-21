@@ -1,1 +1,8 @@
+
+#### React projects ####
 npx create-react-app project-name --template typescript  // Creates react project with typescript
+
+#### Managing Entity Framework ####
+dotnet ef migrations add Init --startup-project C:\Main\Project\Directory\ --project C:\Destination\Project\Directory\
+dotnet ef migrations remove --startup-project C:\Main\Project\Directory\  --project C:\Destination\Project\Directory\
+
