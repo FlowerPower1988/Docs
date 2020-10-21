@@ -6,7 +6,7 @@ npx create-react-app project-name --template typescript  // Creates react projec
 dotnet ef migrations add Init --startup-project C:\Main\Project\Directory\ --project C:\Destination\Project\Directory\
 dotnet ef migrations remove --startup-project C:\Main\Project\Directory\  --project C:\Destination\Project\Directory\
 
-#### Managing VS solution ####
+#### Managing VS solution via .NET Core CLI ####
 dotnet new sln --name Flow.Chat   // This creates new solution
 dotnet new webapi -o Api.Name  // Thic creates web api project
 dotnet new web -o Flow.Chat.Gateway.Api //This creates empty web project
