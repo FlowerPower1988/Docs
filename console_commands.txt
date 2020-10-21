@@ -9,4 +9,5 @@ dotnet ef migrations remove --startup-project C:\Main\Project\Directory\  --proj
 #### Managing VS solution ####
 dotnet new sln --name Flow.Chat   // This creates new solution
 dotnet new webapi -o Api.Name  // Thic creates web api project
- dotnet new web -o Flow.Chat.Gateway.Api //This creates empty web project
+dotnet new web -o Flow.Chat.Gateway.Api //This creates empty web project
+dotnet sln Flow.Chat.sln add ./Gateway/Flow.Chat.Gateway.Api/Flow.Chat.Gateway.Api.csproj  // This adds project to solution
