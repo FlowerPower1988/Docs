@@ -11,3 +11,7 @@ dotnet new sln --name Flow.Chat   // This creates new solution
 dotnet new webapi -o Api.Name  // Thic creates web api project
 dotnet new web -o Flow.Chat.Gateway.Api //This creates empty web project
 dotnet sln Flow.Chat.sln add ./Gateway/Flow.Chat.Gateway.Api/Flow.Chat.Gateway.Api.csproj  // This adds project to solution
+
+#### Docker commands ####
+docker run -p 8080:80        //runs docker container with port mapping (where 80 is internal docker port and 8080 is actual machine port)
+docker build -t flowerpower/flowerpower.chat.gateway.api:0.1 .       //build docker image where -t is tag (name)
