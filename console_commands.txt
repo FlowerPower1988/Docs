@@ -16,3 +16,4 @@ dotnet sln Flow.Chat.sln add ./Gateway/Flow.Chat.Gateway.Api/Flow.Chat.Gateway.A
 docker build -t flowerpower/flowerpower.chat.gateway.api:0.1 .       //build docker image where -t is tag (name)
 docker run -p 8080:80 flowerpower/flowerpower.chat.gateway.api:0.1      //runs docker container with port mapping (where 80 is internal docker port and 8080 is actual machine port)
 
+docker image push flowerpower/flowerpower.chat.gateway.api:0.1  //publishesh docker image to hub
