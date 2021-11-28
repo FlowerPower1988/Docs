@@ -17,3 +17,7 @@ docker build -t flowerpower/flowerpower.chat.gateway.api:0.1 .       //build doc
 docker run -p 8080:80 flowerpower/flowerpower.chat.gateway.api:0.1      //runs docker container with port mapping (where 80 is internal docker port and 8080 is actual machine port)
 
 docker image push flowerpower/flowerpower.chat.gateway.api:0.1  //publishesh docker image to hub
+
+
+#### Cassandra Docker ####
+docker run -d --name cassandra-test --network cassandra-test-network -p 9042:9042 cassandra
