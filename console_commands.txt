@@ -21,3 +21,11 @@ docker image push flowerpower/flowerpower.chat.gateway.api:0.1  //publishesh doc
 
 #### Cassandra Docker ####
 docker run -d --name cassandra-test --network cassandra-test-network -p 9042:9042 cassandra
+
+
+#### Adding kubernetes node ####
+1.First we need to modify cmdline.txt by adding "cgroup_enable=memory cgroup_memory=1" at the begining
+sudo nano /boot/firmware/cmdline.txt
+
+2. Install kubernetes. K3S_URL is addres of master node and K3S_TOKEN is token you may find on your master node. 
+curl -sfL https://get.k3s.io | K3S_TOKEN="K10829dfadcec479c3082316fd34ba58c66beaa6da0d9ae090f11eb1a373cb0213e::server:c25ece34c6f9671aec26fc0c63a0b9ca" K3S_URL="https://192.168.0.101:6443" K3S_NODE_NAME="cluster1-raspi3"  sh -s - --docker
