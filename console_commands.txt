@@ -29,3 +29,12 @@ sudo nano /boot/firmware/cmdline.txt
 
 2. Install kubernetes. K3S_URL is addres of master node and K3S_TOKEN is token you may find on your master node. 
 curl -sfL https://get.k3s.io | K3S_TOKEN="K10829dfadcec479c3082316fd34ba58c66beaa6da0d9ae090f11eb1a373cb0213e::server:c25ece34c6f9671aec26fc0c63a0b9ca" K3S_URL="https://192.168.0.101:6443" K3S_NODE_NAME="cluster1-raspi3"  sh -s - --docker
+
+#### Changing Ubuntu hostname ####
+1. Type: sudo nano /etc/hostname 
+2. Change defult hostname.
+3. Type: sudo nano /etc/hosts
+4. Replace any occurrence of the existing computer name with your new one.
+5. Type: sudo reboot
+
+
