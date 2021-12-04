@@ -14,8 +14,10 @@ dotnet sln Flow.Chat.sln add ./Gateway/Flow.Chat.Gateway.Api/Flow.Chat.Gateway.A
 
 #### Docker commands ####
 docker build -t flowerpower/flowerpower.chat.gateway.api:0.1 .       //build docker image where -t is tag (name)
-docker run -p 8080:80 flowerpower/flowerpower.chat.gateway.api:0.1      //runs docker container with port mapping (where 80 is internal docker port and 8080 is actual machine port)
-docker run --name testapi_2 --volume testapi-volume:/app/Files --publish 3333:80  flowerpower/testapi-windows:1.0 // same as above but also with volume assignment
+
+-Docker Run
+docker run --detach -p 8080:80 flowerpower/flowerpower.chat.gateway.api:0.1      //runs docker container with port mapping (where 80 is internal docker port and 8080 is actual machine port) "--detach" prevents console from entering inside of container 
+docker run --detach --name testapi_2 --volume testapi-volume:/app/Files --publish 3333:80  flowerpower/testapi-windows:1.0 // same as above but also with volume assignment
 
 docker image push flowerpower/flowerpower.chat.gateway.api:0.1  //publishesh docker image to hub
 docker run --interactive --tty ubuntu bash // Runs new container with ubuntu and redirect command line to this ubuntu.
