@@ -21,6 +21,7 @@ docker run --detach --name testapi_2 --volume testapi-volume:/app/Files --publis
 
 docker image push flowerpower/flowerpower.chat.gateway.api:0.1  //publishesh docker image to hub
 docker run --interactive --tty ubuntu bash // Runs new container with ubuntu and redirect command line to this ubuntu.
+docker logs "container-name" -- show logs after container exit
 
 #### Cassandra Docker ####
 docker run -d --name cassandra-test --network cassandra-test-network -p 9042:9042 cassandra
