@@ -73,5 +73,5 @@ network:
 7. Restart: sudo reboot
         
 
-
-
+#### Deploy all yamls in current directory ####
+kubectl create -f .
